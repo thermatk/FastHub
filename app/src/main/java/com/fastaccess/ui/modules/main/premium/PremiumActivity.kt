@@ -18,11 +18,8 @@ import com.airbnb.lottie.LottieAnimationView
 import com.fastaccess.BuildConfig
 import com.fastaccess.R
 import com.fastaccess.helper.*
-import com.fastaccess.provider.fabric.FabricProvider
 import com.fastaccess.ui.base.BaseActivity
 import com.fastaccess.ui.modules.main.donation.DonateActivity
-import com.miguelbcr.io.rx_billing_service.RxBillingService
-import com.miguelbcr.io.rx_billing_service.entities.ProductType
 import io.reactivex.Observable
 import io.reactivex.disposables.Disposable
 
@@ -137,7 +134,6 @@ class PremiumActivity : BaseActivity<PremiumMvp.View, PremiumPresenter>(), Premi
         ViewHelper.hideKeyboard(editText)
         hideProgress()
         successActivationHolder.visibility = View.VISIBLE
-        FabricProvider.logPurchase(InputHelper.toString(editText))
         successActivationView.addAnimatorListener(object : Animator.AnimatorListener {
             override fun onAnimationRepeat(p0: Animator?) {}
             override fun onAnimationEnd(p0: Animator?) {
