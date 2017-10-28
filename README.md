@@ -1,26 +1,42 @@
-#### FastHub currently under huge refactoring, please make sure to submit issue only when needed. 
-
-[![Build Status](https://travis-ci.org/k0shk0sh/FastHub.svg?branch=master)](https://travis-ci.org/k0shk0sh/FastHub)
-[![Releases](https://img.shields.io/github/release/k0shk0sh/FastHub.svg)](https://github.com/k0shk0sh/FastHub/releases/latest) [![Slack](https://img.shields.io/badge/slack-join-e01563.svg)](http://rebrand.ly/fasthub)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Releases](https://img.shields.io/github/release/thermatk/FastHub-Libre.svg)](https://github.com/thermatk/FastHub-Libre/releases/latest)
 
+[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/thermatk/)
+
+
+# FastHub-Libre
+
+This is a foss-friendly fork of FastHub
+
+[<img src="https://f-droid.org/badge/get-it-on.png"
+      alt="Get it on F-Droid"
+      height="80">](https://f-droid.org/packages/com.fastaccess.github.libre)
+      
+## Changes
+- Cleaned from blobs
+- Notifications work using native JobScheduler without any push messaging involved, although the minimum supported update interval becomes 20 minutes
+- It's possible to unlock features, if needed, in a manner which nudges to still try to find a way and support upstream developers. **Once again, please find a way to financially support upstream developers**. If you, just as me, haven't found any other option than to use the in-app purchases in the upstream app, maybe do it from a friend's device!
+- Rebranded in some most obvious places to indicate that "FastHub-Libre" is not exactly "FastHub"
+- Ready to be built and included in the F-Droid store
+
+## Why fork and change these bits? (As of October 2017)
+
+- **Technical reasons**
+  - Upstream developers will never be able to comply with the [F-Droid's inclusion policy](https://f-droid.org/docs/Inclusion_Policy/?title=Inclusion_Policy) 
+- **Ideological reasons**
+  - Upstream developers get offended by the high standards of the F-Droid community, which inevitably result in an _Anti-Feature: Non-Free Network_ badge for any Github client
+  - Upstream developers don't adequately account for users of Android devices without GMS
+  - Upstream app has some _PRO_-features. Users without GMS have no way to unlock these features, turning the software into unfixable crippleware
+  - Upstream developers have shown in the past that they lack a general understanding of the GPL
+  - Upstream developers strongly disapprove that in this fork one can access the _PRO_ features without paying
+  	- This fork will have to carry on without approval until a better solution will surface
+  	- The unlocking page and the way to this page is made respective and nudging to go and support
 
 ![Logo](/.github/assets/feature_graphic.png?raw=true "Logo")
 
-# FastHub  
+# FastHub
 
-Yet another **open-source** GitHub client app but unlike any other app, FastHub was built from scratch.  
-<!--
-[<img src="https://f-droid.org/badge/get-it-on.png"
-      alt="Get it on F-Droid"
-      height="80">](https://f-droid.org/repository/browse/?fdid=com.fastaccess.github)
--->
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-      alt="Download from Google Play"
-      height="80">](https://play.google.com/store/apps/details?id=com.fastaccess.github)
-[<img src=".github/assets/direct-apk-download.png"
-      alt="Direct apk download"
-      height="80">](https://github.com/k0shk0sh/FastHub/releases/latest)
+Yet another **open-source** GitHub client app but unlike any other app, FastHub was built from scratch.
 
 ## Features  
 - **App**
@@ -85,9 +101,6 @@ Yet another **open-source** GitHub client app but unlike any other app, FastHub 
 - _**Much more...**_
   - _FastHub is actively developed. More features will come!_
 
-~~> **FastHub** contain Ads, which are disabled by default. You could enable them if you'd like to support the development.~~  
-_Ads currently not available._
-
 ## Specs / Open-source libraries:
 
 - Minimum **SDK 21**, _but AppCompat is used all the way ;-)_
@@ -99,22 +112,14 @@ _Ads currently not available._
 - [**Stream API**](https://github.com/aNNiMON/Lightweight-Stream-API) for dealing with `Collections`
 - [**ButterKnife**](https://github.com/JakeWharton/butterknife) for view binding
 - [**Android State**](https://github.com/evernote/android-state) for saving instance states
-- [**Lombok**](https://projectlombok.org/) for getters and setters
+- [**Lombok**](https://projectlombok.github.io) for getters and setters
 - [**Material-BottomNavigation**](https://github.com/sephiroth74/Material-BottomNavigation) for `BottomBar` tabs
 - [**Glide**](https://github.com/bumptech/glide) for loading images
 - [**commonmark**](https://github.com/atlassian/commonmark-java) for _Markdown_ conversion to html
 - [**Toasty**](https://github.com/GrenderG/Toasty) for displaying error/success messages
 - [**ShapedImageView**](https://github.com/gavinliu/ShapedImageView) for round avatars
 - [**Material-About-Library**](https://github.com/daniel-stoneuk/material-about-library) for the about screen
-- [**Fabric**](https://fabric.io/kits/android/crashlytics) analytics & crash reporting.
-- [**Lottie**](https://github.com/airbnb/lottie-android) for animations
 - **Android Support Libraries**, the almighty ;-)
-
-## Contribution
-
-You love FastHub? You want new features or bug fixes?  
-Please **contribute** to the  project either by [_creating a PR_](https://github.com/k0shk0sh/FastHub/compare) or [_submitting an issue_](https://github.com/k0shk0sh/FastHub/issues/new) on GitHub.  
-Read the [**contribution guide**](.github/CONTRIBUTING.md) for more detailed information.
 
 ## Language Contributors
 
@@ -172,9 +177,14 @@ Read the [**contribution guide**](.github/CONTRIBUTING.md) for more detailed inf
 
 ## License
 
+Upstream:
 > Copyright (C) 2017 Kosh.  
 > Licensed under the [GPL-3.0](https://www.gnu.org/licenses/gpl.html) license.  
 > (See the [LICENSE](https://github.com/k0shk0sh/FastHub/blob/master/LICENSE) file for the whole license text.)
+
+Libre fork changes:
+> Copyright (C) 2017 Ruslan Boitsov.
+> Licensed under the [GPL-3.0](https://www.gnu.org/licenses/gpl.html) license.
 
 ## Screenshots
 
