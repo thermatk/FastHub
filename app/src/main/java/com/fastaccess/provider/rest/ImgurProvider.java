@@ -38,7 +38,8 @@ public class ImgurProvider {
         client.addInterceptor(chain -> {
             Request original = chain.request();
             Request.Builder requestBuilder = original.newBuilder();
-            requestBuilder.header("Authorization", "Client-ID " + BuildConfig.IMGUR_CLIENT_ID);
+            requestBuilder.header("Authorization", "Client-ID cb12fbe1ef7ea48");
+            // secret: d1a71d8ec9b6af800f6270a72ae9c1aa02e92467
             requestBuilder.method(original.method(), original.body());
             Request request = requestBuilder.build();
             return chain.proceed(request);
