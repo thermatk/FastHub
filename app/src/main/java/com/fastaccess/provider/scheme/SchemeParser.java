@@ -526,7 +526,7 @@ public class SchemeParser {
         if ("issues".equals(segments.get(2))) {
             String owner = segments.get(0);
             String repo = segments.get(1);
-            boolean isFeedback = "k0shk0sh/FastHub".equalsIgnoreCase(owner + "/" + repo);
+            boolean isFeedback = "thermatk/FastHub-Libre".equalsIgnoreCase(owner + "/" + repo);
             return CreateIssueActivity.getIntent(context, owner, repo, isFeedback);
         }
         return null;

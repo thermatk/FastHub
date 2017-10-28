@@ -24,7 +24,6 @@ import com.fastaccess.helper.BundleConstant;
 import com.fastaccess.provider.tasks.version.CheckVersionService;
 import com.fastaccess.provider.theme.ThemeEngine;
 import com.fastaccess.ui.modules.changelog.ChangelogBottomSheetDialog;
-import com.fastaccess.ui.modules.main.donation.DonationActivity;
 import com.fastaccess.ui.modules.repos.RepoPagerActivity;
 import com.fastaccess.ui.modules.repos.issues.create.CreateIssueActivity;
 import com.fastaccess.ui.modules.user.UserPagerActivity;
@@ -49,6 +48,8 @@ public class FastHubAboutActivity extends MaterialAboutActivity {
     @NonNull @Override protected MaterialAboutList getMaterialAboutList(@NonNull Context context) {
         MaterialAboutCard.Builder appCardBuilder = new MaterialAboutCard.Builder();
         buildApp(context, appCardBuilder);
+        MaterialAboutCard.Builder libreCardBuilder = new MaterialAboutCard.Builder();
+        buildLibre(context, libreCardBuilder);
         MaterialAboutCard.Builder miscCardBuilder = new MaterialAboutCard.Builder();
         buildMisc(context, miscCardBuilder);
         MaterialAboutCard.Builder authorCardBuilder = new MaterialAboutCard.Builder();
@@ -56,7 +57,7 @@ public class FastHubAboutActivity extends MaterialAboutActivity {
         MaterialAboutCard.Builder newLogoAuthor = new MaterialAboutCard.Builder();
         MaterialAboutCard.Builder logoAuthor = new MaterialAboutCard.Builder();
         buildLogo(context, newLogoAuthor, logoAuthor);
-        return new MaterialAboutList(appCardBuilder.build(), miscCardBuilder.build(), authorCardBuilder.build(),
+        return new MaterialAboutList(appCardBuilder.build(), libreCardBuilder.build(), miscCardBuilder.build(), authorCardBuilder.build(),
                 newLogoAuthor.build(), logoAuthor.build());
     }
 
@@ -76,6 +77,16 @@ public class FastHubAboutActivity extends MaterialAboutActivity {
             finish();
         }
         return false;//override
+    }
+
+    private void buildLibre(Context context, MaterialAboutCard.Builder libreCardBuilder) {
+        libreCardBuilder.title("FastHub-Libre")
+                .addItem(new MaterialAboutActionItem.Builder()
+                        .text("A liberated fork")
+                        .subText("by thermatk")
+                        .icon(ContextCompat.getDrawable(context, R.drawable.ic_github))
+                        .setOnClickAction(() -> startActivity(RepoPagerActivity.createIntent(this, "FastHub-Libre", "thermatk")))
+                        .build());
     }
 
     private void buildLogo(Context context, MaterialAboutCard.Builder newLogoAuthor, MaterialAboutCard.Builder logoAuthor) {
@@ -115,7 +126,7 @@ public class FastHubAboutActivity extends MaterialAboutActivity {
     }
 
     private void buildAuthor(Context context, MaterialAboutCard.Builder authorCardBuilder) {
-        authorCardBuilder.title(R.string.author);
+        authorCardBuilder.title("[Upstream] " + getString(R.string.author));
         authorCardBuilder.addItem(new MaterialAboutActionItem.Builder()
                 .text("Kosh Sergani")
                 .subText("k0shk0sh")
@@ -132,12 +143,7 @@ public class FastHubAboutActivity extends MaterialAboutActivity {
     }
 
     private void buildMisc(Context context, MaterialAboutCard.Builder miscCardBuilder) {
-        miscCardBuilder.title(R.string.about)
-                .addItem(new MaterialAboutActionItem.Builder()
-                        .text(R.string.support_development)
-                        .icon(ContextCompat.getDrawable(context, R.drawable.ic_heart))
-                        .setOnClickAction(() -> startActivity(new Intent(context, DonationActivity.class)))
-                        .build())
+        miscCardBuilder.title("[Upstream] " + getString(R.string.about))
                 .addItem(new MaterialAboutActionItem.Builder()
                         .text(R.string.changelog)
                         .icon(ContextCompat.getDrawable(context, R.drawable.ic_track_changes))
@@ -167,8 +173,6 @@ public class FastHubAboutActivity extends MaterialAboutActivity {
                 .subText(BuildConfig.VERSION_NAME)
                 .setOnClickAction(() -> startService(new Intent(this, CheckVersionService.class)))
                 .build())
-                .addItem(ConvenienceBuilder.createRateActionItem(context, ContextCompat.getDrawable(context, R.drawable.ic_star_filled),
-                        getString(R.string.rate_app), null))
                 .addItem(new MaterialAboutActionItem.Builder()
                         .text(R.string.report_issue)
                         .subText(R.string.report_issue_here)
