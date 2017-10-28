@@ -27,7 +27,7 @@ android {
     compileSdkVersion 27
     buildToolsVersion '27.0.3'
     defaultConfig {
-        applicationId "com.fastaccess.github"
+        applicationId "com.fastaccess.github.libre"
         minSdkVersion 21
         targetSdkVersion 27
         versionCode 467
