@@ -15,7 +15,6 @@ import com.fastaccess.ui.modules.about.FastHubAboutActivity
 import com.fastaccess.ui.modules.gists.GistsListActivity
 import com.fastaccess.ui.modules.main.MainActivity
 import com.fastaccess.ui.modules.main.MainMvp
-import com.fastaccess.ui.modules.main.donation.CheckPurchaseActivity
 import com.fastaccess.ui.modules.main.playstore.PlayStoreWarningActivity
 import com.fastaccess.ui.modules.notification.NotificationActivity
 import com.fastaccess.ui.modules.pinned.PinnedReposActivity
@@ -65,7 +64,6 @@ class MainDrawerFragment : BaseFragment<MainMvp.View, BasePresenter<MainMvp.View
                     item.itemId == R.id.trending -> activity.startActivity(Intent(activity, TrendingActivity::class.java))
                     item.itemId == R.id.reportBug -> activity.startActivity(CreateIssueActivity.startForResult(activity))
                     item.itemId == R.id.faq -> activity.startActivity(Intent(activity, PlayStoreWarningActivity::class.java))
-                    item.itemId == R.id.restorePurchase -> activity.startActivity(Intent(activity, CheckPurchaseActivity::class.java))
                 }
             }
         }, 250)

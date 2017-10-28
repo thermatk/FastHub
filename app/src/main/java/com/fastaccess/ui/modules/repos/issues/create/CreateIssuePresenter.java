@@ -161,7 +161,7 @@ public class CreateIssuePresenter extends BasePresenter<CreateIssueMvp.View> imp
     }
 
     @Override public void onCheckAppVersion() {
-        makeRestCall(RestProvider.getRepoService(false).getLatestRelease("k0shk0sh", "FastHub"),
+        makeRestCall(RestProvider.getRepoService(false).getLatestRelease("thermatk", "FastHub-Libre"),
                 release -> {
                     if (release != null) {
                         if (!BuildConfig.VERSION_NAME.contains(release.getTagName())) {

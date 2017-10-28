@@ -17,7 +17,7 @@ class CheckVersionService : IntentService("CheckVersionService") {
 
     override fun onHandleIntent(p0: Intent?) {
         RxHelper.getObservable(RestProvider.getRepoService(false)
-                .getLatestRelease("k0shk0sh", "FastHub"))
+                .getLatestRelease("thermatk", "FastHub-Libre"))
                 .subscribe({ t: Release? ->
                     t?.let {
                         Toast.makeText(App.getInstance(), if (BuildConfig.VERSION_NAME.contains(it.tagName))
