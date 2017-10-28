@@ -144,8 +144,8 @@ public class CreateIssueActivity extends BaseActivity<CreateIssueMvp.View, Creat
     }
 
     @NonNull public static Intent startForResult(@NonNull Activity activity) {
-        String login = "k0shk0sh"; // FIXME: 23/02/2017 hardcoded
-        String repoId = "FastHub";// FIXME: 23/02/2017 hardcoded
+        String login = "thermatk"; // FIXME: 23/02/2017 hardcoded
+        String repoId = "FastHub-Libre";// FIXME: 23/02/2017 hardcoded
         Intent intent = new Intent(activity, CreateIssueActivity.class);
         intent.putExtras(Bundler.start()
                 .put(BundleConstant.EXTRA, login)
@@ -197,8 +197,6 @@ public class CreateIssueActivity extends BaseActivity<CreateIssueMvp.View, Creat
     @Override public void onShowUpdate() {
         hideProgress();
         Toasty.error(App.getInstance(), getString(R.string.new_version)).show();
-        ConvenienceBuilder.createRateOnClickAction(this).onClick();
-        finish();
     }
 
     @Override public void onShowIssueMisc() {
@@ -283,7 +281,7 @@ public class CreateIssueActivity extends BaseActivity<CreateIssueMvp.View, Creat
             }
         }
         getPresenter().checkAuthority(login, repoId);
-        if (isFeedback || ("k0shk0sh".equalsIgnoreCase(login) && repoId.equalsIgnoreCase("FastHub"))) {
+        if (("thermatk".equalsIgnoreCase(login) && repoId.equalsIgnoreCase("FastHub-Libre"))) {
             setTitle(R.string.submit_feedback);
             getPresenter().onCheckAppVersion();
         }
