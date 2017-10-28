@@ -9,9 +9,7 @@ import com.fastaccess.helper.DeviceNameGetter;
 import com.fastaccess.helper.TypeFaceHelper;
 import com.fastaccess.provider.colors.ColorsProvider;
 import com.fastaccess.provider.emoji.EmojiManager;
-import com.fastaccess.provider.fabric.FabricProvider;
 import com.fastaccess.provider.tasks.notification.NotificationSchedulerJobTask;
-import com.miguelbcr.io.rx_billing_service.RxBillingService;
 
 import io.requery.Persistable;
 import io.requery.android.sqlite.DatabaseSource;
@@ -43,8 +41,6 @@ public class App extends Application {
     }
 
     private void init() {
-        FabricProvider.initFabric(this);
-        RxBillingService.register(this);
         deleteDatabase("database.db");
         getDataStore();
         setupPreference();
