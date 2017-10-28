@@ -81,8 +81,7 @@ public class AppHelper {
         String brand = (!isEmulator()) ? Build.BRAND : "Android Emulator";
         String model = (!isEmulator()) ? DeviceNameGetter.getInstance().getDeviceName() : "Android Emulator";
         StringBuilder builder = new StringBuilder()
-                .append("**FastHub Version: ").append(BuildConfig.VERSION_NAME).append(enterprise ? " Enterprise**" : "**").append("  \n")
-                .append(!isInstalledFromPlaySore(App.getInstance()) ? "**APK Source: Unknown**  \n" : "")
+                .append("**FastHub-Libre Version: ").append(BuildConfig.VERSION_NAME).append(enterprise ? " Enterprise**" : "**").append("  \n")
                 .append("**Android Version: ").append(String.valueOf(Build.VERSION.RELEASE)).append(" (SDK: ")
                 .append(String.valueOf(Build.VERSION.SDK_INT)).append(")**").append("  \n")
                 .append("**Device Information:**").append("  \n")
