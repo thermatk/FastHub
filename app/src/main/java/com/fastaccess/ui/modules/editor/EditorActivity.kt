@@ -40,7 +40,7 @@ class EditorActivity : BaseActivity<EditorMvp.View, EditorPresenter>(), EditorMv
     private var participants: ArrayList<String>? = null
     private val sentFromFastHub: String by lazy {
         "\n\n_" + getString(R.string.sent_from_fasthub, AppHelper.getDeviceName(), "",
-                "[" + getString(R.string.app_name) + "](https://play.google.com/store/apps/details?id=com.fastaccess.github)") + "_"
+                "[" + getString(R.string.app_name) + "](https://github.com/thermatk/FastHub-Libre/)") + "_"
     }
 
     @BindView(R.id.replyQuote) lateinit var replyQuote: LinearLayout

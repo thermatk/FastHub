@@ -29,7 +29,7 @@ class MarkDownLayout : LinearLayout {
 
     private val sentFromFastHub: String by lazy {
         "\n\n_" + resources.getString(R.string.sent_from_fasthub, AppHelper.getDeviceName(), "",
-                "[" + resources.getString(R.string.app_name) + "](https://play.google.com/store/apps/details?id=com.fastaccess.github)") + "_"
+                "[" + resources.getString(R.string.app_name) + "](https://github.com/thermatk/FastHub-Libre/)") + "_"
     }
 
     var markdownListener: MarkdownListener? = null
