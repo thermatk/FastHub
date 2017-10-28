@@ -4,6 +4,11 @@ package com.fastaccess.provider.tasks.notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.job.JobInfo;
+import android.app.job.JobParameters;
+import android.app.job.JobScheduler;
+import android.app.job.JobService;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
@@ -27,17 +32,9 @@ import com.fastaccess.helper.PrefGetter;
 import com.fastaccess.provider.markdown.MarkDownProvider;
 import com.fastaccess.provider.rest.RestProvider;
 import com.fastaccess.ui.modules.notification.NotificationActivity;
-import com.firebase.jobdispatcher.Constraint;
-import com.firebase.jobdispatcher.FirebaseJobDispatcher;
-import com.firebase.jobdispatcher.GooglePlayDriver;
-import com.firebase.jobdispatcher.Job;
-import com.firebase.jobdispatcher.JobParameters;
-import com.firebase.jobdispatcher.JobService;
-import com.firebase.jobdispatcher.Lifetime;
-import com.firebase.jobdispatcher.RetryStrategy;
-import com.firebase.jobdispatcher.Trigger;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.schedulers.Schedulers;
@@ -47,14 +44,14 @@ import io.reactivex.schedulers.Schedulers;
  */
 
 public class NotificationSchedulerJobTask extends JobService {
-    private final static String JOB_ID = "fasthub_notification";
-    private final static String SINGLE_JOB_ID = "single_fasthub_notification";
+    private final static int JOB_ID = 1;
+    private final static int SINGLE_JOB_ID = 2;
 
     private final static int THIRTY_MINUTES = 30 * 60;
     private static final String NOTIFICATION_GROUP_ID = "FastHub";
 
     @Override public boolean onStartJob(JobParameters job) {
-        if (!SINGLE_JOB_ID.equalsIgnoreCase(job.getTag())) {
+        if (!(SINGLE_JOB_ID == job.getJobId())) {
             if (PrefGetter.getNotificationTaskDuration() == -1) {
                 scheduleJob(this, -1, false);
                 finishJob(job);
@@ -91,41 +88,23 @@ public class NotificationSchedulerJobTask extends JobService {
     }
 
     public static void scheduleJob(@NonNull Context context, int duration, boolean cancel) {
-        if (AppHelper.isGoogleAvailable(context)) {
-            FirebaseJobDispatcher dispatcher = new FirebaseJobDispatcher(new GooglePlayDriver(context));
-            dispatcher.cancel(SINGLE_JOB_ID);
-            if (cancel) dispatcher.cancel(JOB_ID);
+            JobScheduler jobScheduler = (JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE);
+            jobScheduler.cancel(SINGLE_JOB_ID);
+            if (cancel) jobScheduler.cancel(JOB_ID);
             if (duration == -1) {
-                dispatcher.cancel(JOB_ID);
+                jobScheduler.cancel(JOB_ID);
                 return;
             }
             duration = duration <= 0 ? THIRTY_MINUTES : duration;
-            Job.Builder builder = dispatcher
-                    .newJobBuilder()
-                    .setTag(JOB_ID)
-                    .setRetryStrategy(RetryStrategy.DEFAULT_LINEAR)
-                    .setLifetime(Lifetime.FOREVER)
-                    .setRecurring(true)
-                    .setConstraints(Constraint.ON_ANY_NETWORK)
-                    .setTrigger(Trigger.executionWindow(duration / 2, duration))
-                    .setService(NotificationSchedulerJobTask.class);
-            dispatcher.mustSchedule(builder.build());
-        }
-    }
 
-    public static void scheduleOneTimeJob(@NonNull Context context) {
-        if (AppHelper.isGoogleAvailable(context)) {
-            FirebaseJobDispatcher dispatcher = new FirebaseJobDispatcher(new GooglePlayDriver(context));
-            Job.Builder builder = dispatcher
-                    .newJobBuilder()
-                    .setTag(SINGLE_JOB_ID)
-                    .setReplaceCurrent(true)
-                    .setRecurring(false)
-                    .setTrigger(Trigger.executionWindow(30, 60))
-                    .setConstraints(Constraint.ON_ANY_NETWORK)
-                    .setService(NotificationSchedulerJobTask.class);
-            dispatcher.mustSchedule(builder.build());
-        }
+            JobInfo.Builder builder = new JobInfo.Builder(JOB_ID, new ComponentName(context.getPackageName(),
+                    NotificationSchedulerJobTask.class.getName()))
+                    .setBackoffCriteria(JobInfo.DEFAULT_INITIAL_BACKOFF_MILLIS, JobInfo.BACKOFF_POLICY_LINEAR)
+                    .setPersisted(true)
+                    .setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
+                    .setPeriodic(TimeUnit.SECONDS.toMillis(duration));
+
+            jobScheduler.schedule(builder.build());
     }
 
     private void onSave(@Nullable List<Notification> notificationThreadModels, JobParameters job) {
