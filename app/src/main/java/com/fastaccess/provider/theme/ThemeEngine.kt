@@ -12,7 +12,6 @@ import com.fastaccess.helper.ViewHelper
 import com.fastaccess.ui.base.BaseActivity
 import com.fastaccess.ui.modules.login.LoginActivity
 import com.fastaccess.ui.modules.login.chooser.LoginChooserActivity
-import com.fastaccess.ui.modules.main.donation.DonateActivity
 
 /**
  * Created by Kosh on 07 Jun 2017, 6:52 PM
@@ -265,6 +264,5 @@ object ThemeEngine {
                 BitmapFactory.decodeResource(activity.resources, R.mipmap.ic_launcher), ViewHelper.getPrimaryColor(activity)))
     }
 
-    private fun hasTheme(activity: BaseActivity<*, *>) = (activity is LoginChooserActivity || activity is LoginActivity ||
-            activity is DonateActivity)
+    private fun hasTheme(activity: BaseActivity<*, *>) = (activity is LoginChooserActivity || activity is LoginActivity)
 }
