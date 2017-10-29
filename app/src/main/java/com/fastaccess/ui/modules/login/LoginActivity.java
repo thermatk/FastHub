@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputEditText;
@@ -14,7 +13,6 @@ import android.widget.ProgressBar;
 
 import com.evernote.android.state.State;
 import com.fastaccess.App;
-import com.fastaccess.BuildConfig;
 import com.fastaccess.R;
 import com.fastaccess.helper.ActivityHelper;
 import com.fastaccess.helper.AnimHelper;
@@ -22,15 +20,10 @@ import com.fastaccess.helper.AppHelper;
 import com.fastaccess.helper.BundleConstant;
 import com.fastaccess.helper.Bundler;
 import com.fastaccess.helper.InputHelper;
-import com.fastaccess.helper.Logger;
 import com.fastaccess.ui.base.BaseActivity;
 import com.fastaccess.ui.modules.login.chooser.LoginChooserActivity;
-import com.fastaccess.ui.modules.main.donation.DonateActivity;
 import com.fastaccess.ui.widgets.FontCheckbox;
 import com.fastaccess.ui.widgets.dialog.MessageDialogView;
-import com.miguelbcr.io.rx_billing_service.RxBillingService;
-import com.miguelbcr.io.rx_billing_service.entities.ProductType;
-import com.miguelbcr.io.rx_billing_service.entities.Purchase;
 
 import butterknife.BindView;
 import butterknife.OnCheckedChanged;
@@ -163,10 +156,8 @@ public class LoginActivity extends BaseActivity<LoginMvp.View, LoginPresenter> i
     }
 
     @Override public void onSuccessfullyLoggedIn(boolean extraLogin) {
-        checkPurchases(() -> {
-            hideProgress();
-            onRestartApp();
-        });
+        hideProgress();
+        onRestartApp();
     }
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -226,29 +217,6 @@ public class LoginActivity extends BaseActivity<LoginMvp.View, LoginPresenter> i
     @Override public void hideProgress() {
         progress.setVisibility(View.GONE);
         login.show();
-    }
-
-    protected void checkPurchases(@Nullable Action action) {
-        getPresenter().manageViewDisposable(RxBillingService.getInstance(this, BuildConfig.DEBUG)
-                .getPurchases(ProductType.IN_APP)
-                .doOnSubscribe(disposable -> showProgress(0))
-                .subscribe((purchases, throwable) -> {
-                    hideProgress();
-                    if (throwable == null) {
-                        Logger.e(purchases);
-                        if (purchases != null && !purchases.isEmpty()) {
-                            for (Purchase purchase : purchases) {
-                                String sku = purchase.sku();
-                                if (!InputHelper.isEmpty(sku)) {
-                                    DonateActivity.Companion.enableProduct(sku, App.getInstance());
-                                }
-                            }
-                        }
-                    } else {
-                        throwable.printStackTrace();
-                    }
-                    if (action != null) action.run();
-                }));
     }
 
     private void doLogin() {
