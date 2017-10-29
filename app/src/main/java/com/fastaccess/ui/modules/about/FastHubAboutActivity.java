@@ -24,6 +24,7 @@ import com.fastaccess.helper.BundleConstant;
 import com.fastaccess.provider.tasks.version.CheckVersionService;
 import com.fastaccess.provider.theme.ThemeEngine;
 import com.fastaccess.ui.modules.changelog.ChangelogBottomSheetDialog;
+import com.fastaccess.ui.modules.main.donation.DonationActivity;
 import com.fastaccess.ui.modules.repos.RepoPagerActivity;
 import com.fastaccess.ui.modules.repos.issues.create.CreateIssueActivity;
 import com.fastaccess.ui.modules.user.UserPagerActivity;
@@ -86,6 +87,14 @@ public class FastHubAboutActivity extends MaterialAboutActivity {
                         .subText("by thermatk")
                         .icon(ContextCompat.getDrawable(context, R.drawable.ic_github))
                         .setOnClickAction(() -> startActivity(RepoPagerActivity.createIntent(this, "FastHub-Libre", "thermatk")))
+                        .build())
+                .addItem(new MaterialAboutActionItem.Builder()
+                        .text("Unlock all features")
+                        .subText("but don't forget to support developers!")
+                        .icon(ContextCompat.getDrawable(context, R.drawable.ic_lock))
+                        .setOnClickAction(() -> {
+                            startActivity(new Intent(context, DonationActivity.class));
+                        })
                         .build());
     }
 

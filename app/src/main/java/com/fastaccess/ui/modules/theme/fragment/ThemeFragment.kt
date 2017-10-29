@@ -17,7 +17,6 @@ import butterknife.Unbinder
 import com.fastaccess.R
 import com.fastaccess.helper.*
 import com.fastaccess.ui.base.BaseFragment
-import com.fastaccess.ui.modules.main.donation.DonateActivity
 import com.fastaccess.ui.modules.main.premium.PremiumActivity
 import com.fastaccess.ui.widgets.SpannableBuilder
 
@@ -89,9 +88,9 @@ class ThemeFragment : BaseFragment<ThemeFragmentMvp.View, ThemeFragmentPresenter
             val productKey = data?.getStringExtra(BundleConstant.ITEM)
             productKey?.let {
                 when (it) {
-                    getString(R.string.amlod_theme_purchase) -> setTheme(getString(R.string.amlod_theme_mode))
-                    getString(R.string.midnight_blue_theme_purchase) -> setTheme(getString(R.string.mid_night_blue_theme_mode))
-                    getString(R.string.theme_bluish_purchase) -> setTheme(getString(R.string.bluish_theme))
+                    "placeholder" -> setTheme(getString(R.string.amlod_theme_mode))
+                    "placeholder" -> setTheme(getString(R.string.mid_night_blue_theme_mode))
+                    "placeholder" -> setTheme(getString(R.string.bluish_theme))
                 }
             }
         }
@@ -122,7 +121,7 @@ class ThemeFragment : BaseFragment<ThemeFragmentMvp.View, ThemeFragmentPresenter
         if (PrefGetter.isBluishEnabled() || PrefGetter.isProEnabled()) {
             setTheme(getString(R.string.bluish_theme))
         } else {
-            DonateActivity.start(this, getString(R.string.theme_bluish_purchase))
+            PremiumActivity.startActivity(context!!)
         }
     }
 
@@ -131,7 +130,7 @@ class ThemeFragment : BaseFragment<ThemeFragmentMvp.View, ThemeFragmentPresenter
         if (PrefGetter.isAmlodEnabled() || PrefGetter.isProEnabled()) {
             setTheme(getString(R.string.amlod_theme_mode))
         } else {
-            DonateActivity.start(this, getString(R.string.amlod_theme_purchase))
+            PremiumActivity.startActivity(context!!)
         }
     }
 
