@@ -26,10 +26,6 @@
         tools:replace="android:allowBackup"
         tools:targetApi="n">
         <activity
-            android:name=".ui.modules.main.donation.CheckPurchaseActivity"
-            android:configChanges="keyboard|orientation|screenSize"
-            android:theme="@style/ThemeTranslucent"/>
-        <activity
             android:name=".ui.modules.main.MainActivity"
             android:launchMode="singleTask"
             android:theme="@style/SplashTheme">
@@ -201,10 +197,6 @@
         <activity
             android:name=".ui.modules.theme.code.ThemeCodeActivity"
             android:label="@string/theme_title"/>
-        <activity
-            android:name=".ui.modules.main.donation.DonateActivity"
-            android:configChanges="keyboard|orientation|screenSize"
-            android:theme="@style/ThemeTranslucent"/>
         <activity
             android:name=".ui.modules.repos.wiki.WikiActivity"
             android:label="@string/gollum"
