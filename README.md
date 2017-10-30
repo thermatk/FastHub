@@ -14,14 +14,14 @@ This is a foss-friendly fork of FastHub
 ## Why fork and change these bits? (As of October 2017)
 
 - **Technical reasons**
-  - Upstream developers don't want to bother with flavors, so will never be able to comply with the [F-Droid's inclusion policy](https://f-droid.org/docs/Inclusion_Policy/?title=Inclusion_Policy) 
+  - Upstream developers don't have the resources to manage flavors, so will never be able to comply with the [F-Droid's inclusion policy](https://f-droid.org/docs/Inclusion_Policy/?title=Inclusion_Policy) 
 - **Ideological reasons**
   - Upstream developers get offended by the high standards of the F-Droid community, which inevitably result in an _Anti-Feature: Non-Free Network_ badge for any Github client
-  - Upstream developers mistreat all users of Android devices without GMS for either being unlucky or even wrong in beliefs, so while an apk is provided for download outside of Google Play, the simplest effort to add an _else_ clause and reimplement some features without using Google's push mechanism is never done and won't be accepted
-  - Upstream app has some so-called _PRO_-features, some of them quite useful, lack of which turns the software into crippleware. Despite continous requests through different channels by various users, even having quite a multitude of checks for existence of various parts of the Google Play Services, these checks once again don't have an _else_ clause, so even when the app knows that there is no possible way to unlock these features by payment it just goes back a page with an error
+  - Upstream developers don't adequately account for users of Android devices without GMS; attempts to do so have been rejected.
+  - Upstream app has some _PRO_-features, lack of which turns the software into crippleware. Users without GMS have no way to unlock these features.
     - There are some _promocodes_ distributed either to students who need to send their personal documents to the developer(what and how particularly is checked is unknown, privacy implications are unknown) or non-students who have to write articles praising the app. Funnily, the promocodes can only be entered by those who use GMS, as once again the method fails on the first line `if (!isGoogleSupported()) return`, which in this case can't be easily fixed because the codes are stored in a Firebase DB
-  - Upstream developers have shown in the past that they lack a general understanding of the GPL principles or respect for them, misunderstanding whatever contradicts their beliefs or previous plans for an open-source abuse, piracy, etc.
-  - Upstream developers strongly disapprove that in this fork one can access the so-called _PRO_ features without paying
+  - Upstream developers have shown in the past that they lack a general understanding of the GPL principles.
+  - Upstream developers strongly disapprove that in this fork one can access _PRO_ features without paying
   	- This fork will have to carry on without approval until a better solution to please upstream will surface
   	- I've made the unlocking page and the way to this page as respective and nudging to go and support as I could
 
