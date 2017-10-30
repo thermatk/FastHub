@@ -21,6 +21,7 @@ This is a foss-friendly fork of FastHub
   - Upstream app has some so-called _PRO_-features, some of them quite useful, lack of which turns the software into crippleware. Despite continous requests through different channels by various users, even having quite a multitude of checks for existence of various parts of the Google Play Services, these checks once again don't have an _else_ clause, so even when the app knows that there is no possible way to unlock these features by payment it just goes back a page with an error
     - There are some _promocodes_ distributed either to students who need to send their personal documents to the developer(what and how particularly is checked is unknown, privacy implications are unknown) or non-students who have to write articles praising the app. Funnily, the promocodes can only be entered by those who use GMS, as once again the method fails on the first line `if (!isGoogleSupported()) return`, which in this case can't be easily fixed because the codes are stored in a Firebase DB
   - Upstream developers have shown in the past that they lack a general understanding of the GPL principles or respect for them, misunderstanding whatever contradicts their beliefs or previous plans for an open-source abuse, piracy, etc.
+  - Upstream developers as well didn't approve this fork to make the PRO items to be FREE in FOSS ( but this fork ignored that and keeps ingore it because they can do whatever they like ).
 
 ![Logo](/.github/assets/feature_graphic.png?raw=true "Logo")
 
