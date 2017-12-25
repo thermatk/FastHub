@@ -1,3 +1,4 @@
+[![Donate](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/thermatk/)
 [![Releases](https://img.shields.io/github/release/thermatk/FastHub-Libre.svg)](https://github.com/thermatk/FastHub-Libre/releases/latest)
 
 # FastHub-Libre

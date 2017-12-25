@@ -121,7 +121,7 @@ class ThemeFragment : BaseFragment<ThemeFragmentMvp.View, ThemeFragmentPresenter
         if (PrefGetter.isBluishEnabled() || PrefGetter.isProEnabled()) {
             setTheme(getString(R.string.bluish_theme))
         } else {
-            PremiumActivity.startActivity(context)
+            PremiumActivity.startActivity(context!!)
         }
     }
 
@@ -130,7 +130,7 @@ class ThemeFragment : BaseFragment<ThemeFragmentMvp.View, ThemeFragmentPresenter
         if (PrefGetter.isAmlodEnabled() || PrefGetter.isProEnabled()) {
             setTheme(getString(R.string.amlod_theme_mode))
         } else {
-            PremiumActivity.startActivity(context)
+            PremiumActivity.startActivity(context!!)
         }
     }
 
