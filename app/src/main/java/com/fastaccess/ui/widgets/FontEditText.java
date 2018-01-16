@@ -7,7 +7,6 @@ import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
 import android.view.inputmethod.EditorInfo;
 
-import com.crashlytics.android.Crashlytics;
 import com.fastaccess.helper.TypeFaceHelper;
 
 /**
@@ -43,7 +42,6 @@ public class FontEditText extends AppCompatEditText {
             super.setText(text, type);
         } catch (Exception e) {
             setText("I tried, but your OEM just sucks because they modify the framework components and therefore causing the app to crash!" + ".\nFastHub");
-            Crashlytics.logException(e);
         }
     }
 }

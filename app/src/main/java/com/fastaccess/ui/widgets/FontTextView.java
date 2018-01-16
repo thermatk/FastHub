@@ -15,7 +15,6 @@ import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.view.Gravity;
 
-import com.crashlytics.android.Crashlytics;
 import com.evernote.android.state.State;
 import com.evernote.android.state.StateSaver;
 import com.fastaccess.R;
@@ -65,7 +64,6 @@ public class FontTextView extends AppCompatTextView {
         } catch (Exception e) {
             setText("I tried, but your OEM just sucks because they modify the framework components and therefore causing the app to crash!" + "" +
                     ".\nFastHub");
-            Crashlytics.logException(e);
         }
     }
 
