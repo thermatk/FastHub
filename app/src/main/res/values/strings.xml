@@ -87,22 +87,6 @@
     <string name="enterprise" translatable="false">Enterprise</string>
     <string name="endpoint_hint" translatable="false">example.com</string>
     <string name="no_branches" translatable="false">No Branches or Tags</string>
-    <string name="pro_features" translatable="false">PRO Features</string>
-    <string name="pro_features_list" translatable="false"><![CDATA[Get the PRO features of FastHub which includes:\n
-        • All PRO Themes\n
-        • PR Reviews & On-line code comments (PRs & Commits)\n
-        • Commit from FastHub (Edit, Create & Delete files)\n
-        • Supports 2 more Merging methods (Rebase & Squash)\n
-        • Login to unlimited accounts\n
-        • Edit & Add unlimited Gist Files\n
-        • Project Columns & Cards (Edit, Create & Delete)\n
-        • Pin Issues, PRs & Gists\n
-        • New upcoming PRO features (Coming soon...)
-    ]]></string>
-    <string name="enterprise_pro_description" translatable="false"><![CDATA[
-            • Login to unlimited number of Enterprise & GitHub accounts\n
-            • Access GitHub contents along side your Enterprise Account
-    ]]></string>
     <string name="purchase" translatable="false">Purchase</string>
     <string name="get_all" translatable="false">Purchase All (7.00USD)</string>
     <string name="fasthub_premium_features" translatable="false">FastHub Premium Features</string>
@@ -121,9 +105,6 @@
                 </blockquote>
         ]]>
     </string>
-    <string name="purchase_all" formatted="false" translatable="false">Purchase All for %price%</string>
-    <string name="unlock" translatable="false">Unlock</string>
-    <string name="unlock_everything" translatable="false">Unlock Everything</string>
     <string name="feeds" translatable="false">Feeds</string>
     <!-- END OF DO NOT COPY, START COPYING FROM LINE BELOW -->
 
@@ -256,7 +237,6 @@
     <string name="thank_you_for_feedback">Thanks for your feedback!</string>
     <string name="current_version">Current version</string>
     <string name="version">Version</string>
-    <string name="support_development_enable_ads">Support development, enable ads</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="twoFactor">Two-factor authentication code</string>
@@ -403,7 +383,6 @@
     <string name="read_write_permission_explanation">Please accept the permissions in order for FastHub to
         store the files on your device to be able to view them</string>
     <string name="public_gists">Public Gists</string>
-    <string name="enable_ads">Enable Ads</string>
     <string name="no_issues">No issues</string>
     <string name="no_unread_notifications">No unread notifications.</string>
     <string name="my_gists">My Gists</string>

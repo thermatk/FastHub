@@ -46,7 +46,7 @@
     <string name="re_open">Rouvrir</string>
     <string name="close">Fermer</string>
     <string name="success_re_opened">Rouvert avec succès</string>
-    <string name="lock_issue_details">Bloquer la conversation signifie :\n&#183;Les autres utilisateurs ne peuvent plus ajouter de commentaires à ce ticket.\n&#183; Les personnes ayant accès à ce dépôt pourront toujours laisser des commentaires visibles de tous.\n&#183;Vous pourrez toujours débloquer la conversation sur ce ticket par la suite.\n</string>
+    <string name="lock_issue_details">Bloquer la conversation signifie que :\n&#183;Les autres utilisateurs ne peuvent plus ajouter de commentaires à ce ticket.\n&#183; Les personnes ayant accès à ce dépôt pourront toujours laisser des commentaires visibles de tous.\n&#183;Vous pourrez toujours débloquer la conversation sur ce ticket par la suite.\n</string>
     <string name="unlock_issue_details">Débloquer la conversation signifie :\n&#183;Tout le monde pourra ajouter des commentaires à ce ticket.\n&#183;Vous pourrez toujours bloquer la conversation sur ce ticket par la suite.\n</string>
     <string name="lock_issue">Bloquer la conversation</string>
     <string name="unlock_issue">Débloquer la conversation</string>
@@ -125,18 +125,17 @@
     <string name="thank_you_for_feedback">Merci pour votre commentaire !</string>
     <string name="current_version">Version actuelle</string>
     <string name="version">Version</string>
-    <string name="support_development_enable_ads">Pour supporter le développement, activer la publicité</string>
     <string name="username">Nom d\'utilisateur</string>
     <string name="password">Mot de passe</string>
     <string name="twoFactor">Code d\'authentification</string>
     <string name="login">Se connecter</string>
     <string name="gist_description">Description du Gist</string>
-    <string name="avatar_click_hint">Tout partout où il y a un avatar d\'utilisateur, vous pouvez cliquer dessus pour accèder à son profil</string>
+    <string name="avatar_click_hint">Partout où il y a un avatar d\'utilisateur, vous pouvez cliquer dessus pour accèder à son profil</string>
     <string name="feeds_fork_hint">Cliquer longuement sur un fork pour ouvrir le dépôt original ou le fork.</string>
-    <string name="click_here_to_download_release_hint">Download releases</string>
+    <string name="click_here_to_download_release_hint">Télécharger les versions</string>
     <string name="options">Options</string>
     <string name="click_file_option_hint">Télécharger un fichier ou partager un dossier</string>
-    <string name="comment_hint">Appuyer sur un commentaire pour tagguer son auteur ou éditer l\'un des vôtres.
+    <string name="comment_hint">Appuyer sur un commentaire pour taguer son auteur ou éditer l\'un des vôtres.
         \nPresser longuement sur votre commentaire pour le supprimer.</string>
     <string name="star_hint">Mettre en avant/Ne plus mettre en avant ce dépôt</string>
     <string name="watch">Suivre</string>
@@ -146,9 +145,9 @@
     <string name="no_url">Aucune URL trouvée</string>
     <string name="last_updated">Dernière modification</string>
     <string name="preview">Prévisualisation</string>
-    <string name="view_code">Surlignage syntaxique</string>
-    <string name="click_to_toggle_highlighting">Toggle syntax highlighting.
-        \nScroll the Markdown editor icons for more options.</string>
+    <string name="view_code">Coloration syntaxique</string>
+    <string name="click_to_toggle_highlighting">Cliquez pour activer ou désactiver la coloration syntaxique.
+        \nFaites défiler les icônes de l\'éditeur Markdown pour plus d\'options.</string>
     <string name="creation_date">Date de création</string>
     <string name="creation_date_hint">Date de création du fichier</string>
     <string name="last_updated_hint">Date de la dernière modification du fichier</string>
@@ -173,7 +172,7 @@
     <string name="commented_on_issue">Commenter un ticket</string>
     <string name="member">Membre</string>
     <string name="pr_comment_review">Commentaire sur la Pull Request</string>
-    <string name="pushed">Pushed to</string>
+    <string name="pushed">Poussé vers</string>
     <string name="team_event">Équipe</string>
     <string name="deleted">Supprimé</string>
     <string name="unknown">Inconnu</string>
@@ -193,7 +192,7 @@
     <string name="due_on">Échéance le</string>
     <string name="no_assignees">Aucun destinataire</string>
     <string name="this_value">ce</string>
-    <string name="commits_reflected">Les modifications (commits) ont été déplacés vers la branche sélectionnée</string>
+    <string name="commits_reflected">Les modifications (commits) ont été déplacées vers la branche sélectionnée</string>
     <string name="general_settings">Général</string>
     <string name="background_job_summary">Changer la fréquence avec laquelle FastHub vérifie les nouvelles notifications</string>
     <string name="background_job_title">Intervalle de synchronisation</string>
@@ -213,9 +212,8 @@
     <string name="now">Maintenant</string>
     <string name="unsaved_data_warning">Annuler les changements non sauvegardés ?</string>
     <string name="private_repo">Privé</string>
-    <string name="rect_avatar_summary">Use rounded squarish avatars instead of circular ones</string>
-    <string name="rect_avatar_title">Squarish Avatars</string>
-    <string name="rate_app">Noter cette application</string>
+    <string name="rect_avatar_summary">Utiliser des avatars carrés aux bords arrondis à la place de ceux circulaires</string>
+    <string name="rect_avatar_title">Avatars carrés</string>
     <string name="author">Auteur</string>
     <string name="fork_github">Fork sur GitHub</string>
     <string name="send_email">Envoyer un e-mail</string>
@@ -227,11 +225,11 @@
     <string name="notification_settings">Notifications</string>
     <string name="turn_off">Éteindre</string>
     <string name="unauthorized_user">Utilisateur non autorisé</string>
-    <string name="two_factors_otp_error">L\'authentification Two factors est requise</string>
+    <string name="two_factors_otp_error">L\'authentification en deux étapes est requise</string>
     <string name="copy">Copier URL</string>
     <string name="success_copied">Copié</string>
     <string name="commit_message">Message de Commit</string>
-    <string name="network_error">Erreur lors de la communisation avec le serveur</string>
+    <string name="network_error">Erreur lors de la communication avec le serveur</string>
     <string name="unexpected_error">Erreur inattendue lors de la connexion avec l\'API</string>
     <string name="request_error">Erreur de connexion avec le serveur, merci de réessayer plus tard</string>
     <string name="marking_as_read">Marquer la notification comme lue</string>
@@ -242,10 +240,9 @@
     <string name="mark_notification_summary">Désactiver le changement de statut "Lu" au clic sur une notification.</string>
     <string name="theme_title">Thème</string>
     <string name="theme_summary">Choisir votre thème par défaut</string>
-    <string name="theme_color_summary">Choose theme accent color</string>
-    <string name="theme_color_title">Theme Accent Color</string>
+    <string name="theme_color_summary">Choisir la couleur d\'accentuation du thème</string>
+    <string name="theme_color_title">Couleur d\'accentuation</string>
     <string name="website">Site web</string>
-    <string name="support_development">Supporter le développement</string>
     <string name="success_purchase_message">Merci d\'être extrêmement génial !</string>
     <string name="change_theme_warning">Si le changement de thème a échoué, merci de fermer l\'application et de la redémarrer manuellement.</string>
     <string name="pin">Épingler</string>
@@ -264,11 +261,11 @@
     <string name="no_starred_repos">Aucun dépôt mis en avant</string>
     <string name="no_commits">Aucun Commit</string>
     <string name="no_contributors">Aucun contributeur</string>
-    <string name="no_releases">No releases</string>
+    <string name="no_releases">Aucune version</string>
     <string name="no_events">Aucun évènement</string>
     <string name="no_pull_requests">Aucune pull request</string>
     <string name="no_search_results">Aucun résultat de recherche</string>
-    <string name="read_write_permission_explanation">Merci d\'accepter les permissions afin que FastHub puisse enregistrer des fichiers sur votre appareil pour pouvoir y accèder plus tard</string>
+    <string name="read_write_permission_explanation">Merci d\'accepter les permissions afin que FastHub puisse enregistrer des fichiers sur votre appareil pour pouvoir y accéder plus tard</string>
     <string name="public_gists">Gists publiques</string>
     <string name="enable_ads">Activer la publicité</string>
     <string name="no_issues">Aucune issue</string>
@@ -306,21 +303,21 @@
     <string name="oldest">Ancien</string>
     <string name="most_commented">Les plus commentés</string>
     <string name="least_commented">Les moins commentés</string>
-    <string name="recently_updated">Mise à jour récemment</string>
-    <string name="least_recent_updated">Least recently updated</string>
+    <string name="recently_updated">Le plus récent</string>
+    <string name="least_recent_updated">Le plus ancien</string>
     <string name="up_to_date">Vous avez la dernière version !</string>
     <string name="new_version">Une nouvelle version est disponible.</string>
     <string name="empty_search_error">Le champ de recherche ne peut pas être vide</string>
     <string name="long_press_repo_fab_hint">Presser longuement pour créer un ticket à la volée</string>
-    <string name="commit_can_be_merged">Cette Pull Request peut-être fusionnée</string>
-    <string name="reviewed">reviewed</string>
-    <string name="dismissed_review">dismissed their review</string>
+    <string name="commit_can_be_merged">Cette Pull Request peut être fusionnée</string>
+    <string name="reviewed">relu</string>
+    <string name="dismissed_review">relecture ignorée</string>
     <string name="approved_these_changes">Valider ces changements</string>
     <string name="no_reactions">Aucune réaction</string>
     <string name="reactions">Réactions</string>
     <string name="wrap_content">Retour à la ligne du contenu</string>
-    <string name="wrap_code_summary">Wrap code in code viewer by default</string>
-    <string name="wrap_code_title">Wrap Code</string>
+    <string name="wrap_code_summary">Retour à la ligne par défaut dans la visionneuse de code</string>
+    <string name="wrap_code_title">Retour à la ligne</string>
     <string name="open_source_libs">Logiciels Open source</string>
     <string name="enable_notification_sound_summary">Activer les notifications sonores lorsqu\'une notification est arrivée.</string>
     <string name="enable_notification_sound_title">Activer les notifications sonores</string>
@@ -328,17 +325,12 @@
     <string name="login_with_personal_token">Se connecter avec un jeton personnel</string>
     <string name="personal_token">Jeton personnel</string>
     <string name="basic_login">Se connecter via l\'authentification simple</string>
-    <string name="no_orgs_description">If you are actually tied to an organizations and you can\'t see them here please follow link
-        below.\nhttps://help.github.com/articles/about-third-party-application-restrictions\nPS: You could use Access token to login which will
-        grant FastHub access to list your organizations.\nYou could also open up https://github.com/settings/applications and look for
-        FastHub, open it then scroll to Organization access and click on Grant Button.</string>
+    <string name="no_orgs_description">Si vous êtes lié à une organisation et que vous ne pouvez pas la voir, suivez le lien ci-dessous.
+               \nhttps://help.github.com/articles/about-third-party-application-restrictions\nPS: Vous pourriez utiliser un jeton d\'accès pour vous connecter, ce qui autoriserait FastHub à lister vos organisations.
+               \nVous pourriew aussi ouvrir https://github.com/settings/applications et chercher FastHub, ouvrir son autorisation, aller dans Organization access et cliquer sur le bouton Grant.</string>
     <string name="insert">Insérer</string>
     <string name="select">Sélectionner</string>
     <string name="select_picture">Sélectionner une image</string>
-    <string name="support_with_2_00">Supporter en donnant 2 dollars</string>
-    <string name="support_with_5_00">Supporter en donnant 5 dollars</string>
-    <string name="support_with_10_00">Supporter en donnant 10 dollars</string>
-    <string name="support_with_20_00">Supporter en donnant 20 dollars</string>
     <string name="app_language">Langue de l\'application</string>
     <string name="language">Langue</string>
     <string name="choose_language_title">Choisir la langue</string>
@@ -351,36 +343,36 @@
     <string name="access_token">Jeton d\'accès</string>
     <string name="basic_authentication">Authentification simple</string>
     <string name="choose_your_login_type">Choisissez votre type de connexion</string>
-    <string name="files_only">In Files</string>
-    <string name="paths_only">In Paths</string>
-    <string name="review_requests">Review Requests</string>
+    <string name="files_only">Dans les fichiers</string>
+    <string name="paths_only">Dans les chemins</string>
+    <string name="review_requests">Examiner les requêtes</string>
     <string name="join_slack">Rejoindre Slack</string>
     <string name="join_slack_message">Voulez-vous rejoindre le groupe FastHub sur Slack ?</string>
     <string name="successfully_invited">Invité avec succès</string>
     <string name="reply">Répondre</string>
     <string name="failed_selecting_image">Impossible de charger l\'image.</string>
     <string name="want_to_merge">veut fusionner</string>
-    <string name="watchers">Watchers</string>
+    <string name="watchers">Suiveurs</string>
     <string name="reviewers">Relecteurs</string>
     <string name="no_reviewers">Aucun relecteur</string>
     <string name="sent_from_fasthub">Envoyé depuis mon %1$s en utilisant %2$s%3$s</string>
-    <string name="enable_signature">Enable Signature</string>
-    <string name="enable_signature_summary">Enable sent via signature</string>
-    <string name="enable_signature_box">Enable Signature Box</string>
-    <string name="enable_signature_box_summary">Enable checkbox to toggle signature in text editor</string>
+    <string name="enable_signature">Activer la signature/string>
+    <string name="enable_signature_summary">Activer la signature "Envoyé via"</string>
+    <string name="enable_signature_box">Case pour activer la signature</string>
+    <string name="enable_signature_box_summary">Cocher la case pour activer la signature dans l\'éditeur de texte</string>
     <string name="tags">Étiquettes</string>
     <string name="add_comment">Ajouter un commentaire</string>
     <string name="image_error">Erreur de chargement de l\'image, merci de recommencer.</string>
-    <string name="trending">Trending</string>
+    <string name="trending">Tendances</string>
     <string name="not_really_working">Trier par emojis ne fonctionne pas suite à une limitation de GitHub</string>
     <string name="scroll_up">Défiler vers le haut</string>
     <string name="scroll_down">Défiler vers le bas</string>
     <string name="participated">Participé</string>
-    <string name="todo_checked">Todo checked</string>
-    <string name="todo_unchecked">Todo unchecked</string>
+    <string name="todo_checked">Todo cochés</string>
+    <string name="todo_unchecked">Todo non cochés</string>
     <string name="divider">Séparateur</string>
     <string name="no_user_found">Aucun utilisateur trouvé</string>
-    <string name="no_trending">No trending</string>
+    <string name="no_trending">Aucune tendance</string>
     <string name="reset">Réinitialiser</string>
     <string name="apply">Appliquer</string>
     <string name="filter">Filtrer</string>
@@ -391,25 +383,23 @@
     <string name="milestone_added">Jalon ajouté avec succès</string>
     <string name="feed">Flux</string>
     <string name="premium_theme">Thème Premium</string>
-    <string name="choose_code_theme">Code color palette</string>
-    <string name="enterprise_login_warning">Please do login to your GitHub account in order to access everything from GitHub API
-        otherwise you\'ll end up being kicked out every time you access anything rather than your Enterprise GitHub due to the token transmitted to
-        GitHub API is coming from your Enterprise Account.</string>
+    <string name="choose_code_theme">Palette de couleurs de code</string>
+    <string name="enterprise_login_warning">Veuillez vous connecter à votre compte GitHub personnel pour pouvoir utiliser toute l\'API GitHub, ou vous finirez par
+                être refusé à chaque fois que vous accéderez à tout sauf votre organisation, vu que le jeton transmis à l\'API GitHub vient de votre compte d\'organisation.</string>
     <string name="add_account">Ajouter un compte</string>
     <string name="choose_account">Choisir un compte</string>
     <string name="not_match">Aucune correspondance</string>
     <string name="warning">Attention</string>
     <string name="owner">Propriétaire</string>
-    <string name="original_poster">Original Poster</string>
-    <string name="cancel_reviews">Cancel Reviews</string>
-    <string name="colored_navbar_summary">Disable colored navigation bar in themes</string>
+    <string name="original_poster">Premier commentateur</string>
+    <string name="cancel_reviews">Annuler l\'examen</string>
+    <string name="colored_navbar_summary">Désactiver la couleur de la barre de navigation du thème</string>
     <string name="colored_navbar_title">Barre de navigation sans couleur</string>
     <string name="sound_chooser_summary">Choisir le son de notification personnalisé</string>
     <string name="sound_chooser_title">Choisir le son de notification</string>
     <string name="disable_auto_gif_summary">Désactiver la lecture automatique des GIFs</string>
     <string name="disable_auto_gif_title">Désactiver la lecture des GIFs</string>
     <string name="request_changes">changements requis</string>
-    <string name="google_play_service_error">Google Play Services sont indisponibles</string>
     <string name="edit_gist">Éditer le Gist</string>
     <string name="content">Contenu</string>
     <string name="expand">développer</string>
@@ -427,36 +417,39 @@
     <string name="please_read">MERCI DE LIRE !</string>
     <string name="fasthub_faq_description">
         <![CDATA[
-        <h5>• Why can\'t I see either my <i>Private</i> or my <i>Public</i> <b>Organizations</b>?</h5>
-        <p>Open up https://github.com/settings/applications and look for FastHub, open it up, scroll down to "Organization access" and click on the "Grant" button.
-        Alternatively you can sign in using <b>Access Token</b> which will ease the process.</p>
+        <h5>• Pourquoi je ne peux pas voir mes <b>organisations</b> <i>privées</i> ou <i>publiques</i>?</h5>
+        <p>Ouvrez https://github.com/settings/applications et cherchez FastHub, ouvrez son autorisation, allez dans Organization access et cliquez sur le bouton Grant. Sinon, vous pourriez vous connecter à l\'aide d\'un <b>jeton d\'accès</b>, ce qui simplifiera l\'opération.</p>
 
-        <h5>• I have tried signing in with an Access Token and a One-Time Password (OTP) without any luck. What\'s wrong?</h5>
-        <p>You can\'t sign in using Access Token and OTP all together. Due to the limited lifetime of such passwords you\'ll have to repeat a sign in procedure every few seconds.</p>
+        <h5>• J\'ai essayé de me connecter avec un jeton d\'accès et un code d\'authentification (OTP) sans succès. Qu\'est-ce qui ne va pas ?</h5>
+        <p>Vous ne pouvez pas vous connecter avec un jeton d\'accès et un code d\'authentification en même temps. Vu que ces codes sont éphémères, vous auriez à vous connecter de nouveau au bout de quelques secondes.</p>
 
-        <h5>• Why aren\'t my Private and Enterprise Repositories\' Wikis showing up?</h5>
-        <p>As FastHub scraps GitHub\'s Wiki pages, the application is unable to obtain any session token which is required by Private Repositories.</p>
+        <h5>• Pourquoi les wikis de mes dépôts privés ou d\'organisation n\'apparaissent pas ?</h5>
+        <p>Vu que FastHub récupère les pages de wiki via l\'API GitHub, l\'application ne peut pas obtenir de jeton de session requis pour accéder à des dépôts non publics.</p>
 
-        <h5>• I have signed into my Enterprise account. Why can\'t I interact with anything other than my Enterprise GitHub?</h5>
-        <p>Well, logically, you can\'t access anything else other than your Enterprise. FastHub tries to require as many permissions as possible, but can\'t do anything more about it
-        in most cases, since your credentials are not on GitHub\'s server. But in <b>some</b> cases your GitHub account OAuth token will do the trick.</p>
+        <h5>• Je suis connecté à mon compte d\'organisation. Pourquoi ne puis-je pas interagir avec quoi que ce soit d\'autre que mon organisation ?</h5>
+        <p>Logiquement, vous ne pouvez pas accéder à autre chose que votre organisation. FastHub essaie de demander autant d\'autorisations que nécessaire, mais ne peut rien faire de plus sur ce point. Mais dans <b>certains</b> cas, un jeton OAuth pour votre compte GitHub personnel résoudra le problème.</p>
 
-        <h5>• Why am I having problems editing Issues/Pull Requests (PRs)?</h5>
-        <p>If you are unable to edit Issues/PRs in a Public Organization\'s repository, please contact your Organization to grant access to FastHub. Alternatively you can sign in with an Access Token.</p>
+        <h5>• Pourquoi je ne peux pas modifier des Issues/Pull Requests (PRs) ?</h5>
+        <p>Si vous n\'arrivez pas à modifier des Issues/Pull Requests (PRs) dans le dépôt public d\'une organisation, vous devez demander à celle-ci d\'autoriser FastHub. Sinon, essayez de vous connecter à l\'aide d\'un jeton d\'accès.</p>
 
-        <h5>• I\'m having problems! / I want to suggest you some things!</h5>
-        <p>Head to https://github.com/k0shk0sh/FastHub/issues/new and create a new issue for any bugs and feature requests. I really do encourage you to
-        search for similar issues before opening a new one. Any duplicated ticket will be labeled as duplicated and closed immediately.</p>
+        <h5>• J\'ai un problème ! / Je voudrais proposer quelque chose !</h5>
+        <p>Ouvrez https://github.com/thermatk/FastHub-Libre/issues/new et créez une nouvelle issue pour tout bogue ou ajout de fonctionnalité. Je vous conseille de d\'abord chercher si quelqu\'un n\'a pas déjà créé une issue similaire avant de créer la vôtre. Tout ticket en double sera marqué comme tel, et immédiatement fermé.</p>
     ]]></string>
     <string name="faq">FAQ</string>
     <string name="comments_added_successfully">Commentaires ajoutés avec succès</string>
-    <string name="clear_search_keywords">Vider l'historique de recherche</string>
-    <string name="restore_purchases">Restore Purchases</string>
+    <string name="clear_search_keywords">Vider l\'historique de recherche</string>
     <string name="include_forks">Inclure les Forks</string>
     <string name="comment_is_too_far_to_paginate">The comment is too far to paginate</string>
     <string name="search_results_warning">Merci de préciser votre recherche</string>
-    <string name="disable_loading_image_title">Désactiver image de chargement</string>
-    <string name="disable_loading_image_summary">Disable loading image while on data plan</string>
-    <string name="report_issue_warning">Ce ticket sera soumis au dépôt FastHub sur GitHub</string>
-    <string name="block">Block</string>
+    <string name="disable_loading_image_title">Désactiver le chargement des images</string>
+    <string name="disable_loading_image_summary">Désactiver le chargement des images quans vous êtes connecté via réseau mobile</string>
+    <string name="report_issue_warning">Ce ticket sera soumis au dépôt FastHub-Libre sur GitHub</string>
+    <string name="block">Bloquer</string>
+    <string name="unblock">Débloquer</string>
+    <string name="user_blocked">Utilisateur bloqué</string>
+    <string name="user_unblocked">Utilisateur débloqué</string>
+    <string name="clear_image_cache">Vider le cache des images</string>
+    <string name="restart_app_message">Veuillez redémarrer l\'app</string>
+    <string name="menu_label">Menu</string>
+    <string name="commit_file_required">Aucun fichier modifié !</string>
 </resources>

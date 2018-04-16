@@ -75,7 +75,6 @@ public class PrefGetter {
 
 
     private static final String WHATS_NEW_VERSION = "whats_new";
-    private static final String ADS = "enable_ads";
     private static final String TOKEN = "token";
     private static final String ENTERPRISE_TOKEN = "enterprise_token";
     private static final String USER_ICON_GUIDE = "user_icon_guide";
@@ -136,14 +135,6 @@ public class PrefGetter {
 
     public static void setOtpCode(@Nullable String otp) {
         PrefHelper.set(OTP_CODE, otp);
-    }
-
-    public static boolean isAdsEnabled() {
-        return PrefHelper.getBoolean(ADS);
-    }
-
-    public static void setAdsEnabled(boolean isEnabled) {
-        PrefHelper.set(ADS, isEnabled);
     }
 
     public static void clear() {
