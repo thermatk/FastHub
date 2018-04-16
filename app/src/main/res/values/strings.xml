@@ -46,7 +46,7 @@
     <string name="project_event" translatable="false">Project</string>
     <string name="pr_review_event" translatable="false">Pull Request</string>
     <string name="repo_event" translatable="false">Repository</string>
-    <string name="email_address" translatable="false">thermatk@thermatk.com</string>
+    <string name="email_address" translatable="false">fastaccess.app@gmail.com</string>
     <string name="forking" formatted="true" translatable="false">Forking %s</string>
     <string name="starring" formatted="true" translatable="false">Starring %s</string>
     <string name="un_starring" formatted="true" translatable="false">Unstarring %s</string>
