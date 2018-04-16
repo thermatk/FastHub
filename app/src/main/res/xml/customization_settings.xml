@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
-        android:defaultValue="false"
-        android:icon="@drawable/ic_support"
-        android:key="enable_ads"
-        android:title="@string/enable_ads"/>
-
     <com.fastaccess.ui.widgets.ColorPickerPreference
         android:defaultValue="@string/blue_theme_mode"
         android:dialogTitle="@string/theme_color_title"
