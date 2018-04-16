@@ -256,7 +256,6 @@
     <string name="thank_you_for_feedback">Thanks for your feedback!</string>
     <string name="current_version">Current version</string>
     <string name="version">Version</string>
-    <string name="support_development_enable_ads">Support development, enable ads</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="twoFactor">Two-factor authentication code</string>
@@ -403,7 +402,6 @@
     <string name="read_write_permission_explanation">Please accept the permissions in order for FastHub to
         store the files on your device to be able to view them</string>
     <string name="public_gists">Public Gists</string>
-    <string name="enable_ads">Enable Ads</string>
     <string name="no_issues">No issues</string>
     <string name="no_unread_notifications">No unread notifications.</string>
     <string name="my_gists">My Gists</string>
