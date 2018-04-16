@@ -32,7 +32,6 @@
             android:layout_alignBottom="@+id/navAvatarLayout"
             android:layout_alignStart="@+id/navAvatarLayout"
             android:layout_marginStart="@dimen/spacing_large"
-            android:contentDescription="@string/success_purchase_message"
             android:src="@drawable/ic_heart_full"
             android:visibility="gone"
             tools:visibility="visible"/>
