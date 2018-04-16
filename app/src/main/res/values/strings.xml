@@ -46,7 +46,7 @@
     <string name="project_event" translatable="false">Project</string>
     <string name="pr_review_event" translatable="false">Pull Request</string>
     <string name="repo_event" translatable="false">Repository</string>
-    <string name="email_address" translatable="false">fastaccess.app@gmail.com</string>
+    <string name="email_address" translatable="false">thermatk@thermatk.com</string>
     <string name="forking" formatted="true" translatable="false">Forking %s</string>
     <string name="starring" formatted="true" translatable="false">Starring %s</string>
     <string name="un_starring" formatted="true" translatable="false">Unstarring %s</string>
@@ -87,22 +87,6 @@
     <string name="enterprise" translatable="false">Enterprise</string>
     <string name="endpoint_hint" translatable="false">example.com</string>
     <string name="no_branches" translatable="false">No Branches or Tags</string>
-    <string name="pro_features" translatable="false">PRO Features</string>
-    <string name="pro_features_list" translatable="false"><![CDATA[Get the PRO features of FastHub which includes:\n
-        • All PRO Themes\n
-        • PR Reviews & On-line code comments (PRs & Commits)\n
-        • Commit from FastHub (Edit, Create & Delete files)\n
-        • Supports 2 more Merging methods (Rebase & Squash)\n
-        • Login to unlimited accounts\n
-        • Edit & Add unlimited Gist Files\n
-        • Project Columns & Cards (Edit, Create & Delete)\n
-        • Pin Issues, PRs & Gists\n
-        • New upcoming PRO features (Coming soon...)
-    ]]></string>
-    <string name="enterprise_pro_description" translatable="false"><![CDATA[
-            • Login to unlimited number of Enterprise & GitHub accounts\n
-            • Access GitHub contents along side your Enterprise Account
-    ]]></string>
     <string name="purchase" translatable="false">Purchase</string>
     <string name="get_all" translatable="false">Purchase All (7.00USD)</string>
     <string name="fasthub_premium_features" translatable="false">FastHub Premium Features</string>
@@ -121,9 +105,6 @@
                 </blockquote>
         ]]>
     </string>
-    <string name="purchase_all" formatted="false" translatable="false">Purchase All for %price%</string>
-    <string name="unlock" translatable="false">Unlock</string>
-    <string name="unlock_everything" translatable="false">Unlock Everything</string>
     <string name="feeds" translatable="false">Feeds</string>
     <!-- END OF DO NOT COPY, START COPYING FROM LINE BELOW -->
 
