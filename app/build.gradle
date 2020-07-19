@@ -74,8 +74,6 @@ android {
 }
 
 repositories {
-    maven { url "https://clojars.org/repo/" }
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     maven { url "https://jitpack.io" }
 }
 
@@ -127,7 +125,6 @@ dependencies {
     implementation("com.apollographql.apollo:apollo-runtime:1.2.2")
     implementation 'com.jaredrummler:android-device-names:1.1.9'
     implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:2.1.0'
-    implementation 'com.google.guava:guava:27.0.1-android' /*to be removed*/
     debugImplementation 'com.github.whataa:pandora:2.0.6'
     releaseImplementation 'com.github.whataa:pandora-no-op:2.0.3'
 
